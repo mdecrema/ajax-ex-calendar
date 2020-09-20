@@ -1,7 +1,9 @@
 $(document).ready(function() {
 
   for (i=1; i<=31; i++) {
-
+    if (i<10) {
+      i = "0"+i;
+    }
     var day = {
       "giorno": i,
       "mese": "Gennaio"
