@@ -75,12 +75,20 @@ $(".titolo-mese").append(contenuto);
 
 // Function click su div 'Prev'
 $(".next").click(function() {
-  var ciao = dataSupp;
-  meseSuccessivo();
+  var n = $(".titolo-mese").attr("data-mese");
+  console.log(n);
+  if (n == 12) {
+    alert("errore");
+  } else {
+  n++;
+  console.log(n);
+  var cod = $(".titolo-mese[data-mese='"+n+"']");
+  console.log(cod);
+}
 });
 
-function meseSuccessivo(valore) {
-  valore.add(1, "months");
-}
+/*function meseSuccessivo(valore) {
+  .add(1, "months");
+}*/
 
 })
