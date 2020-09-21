@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
-  var calendarDate = moment(date);
+  var dataIniziale = "2018-01-01";
+
+  var calendarDate = moment(dataIniziale);
+  console.log(calendarDate);
 
   $.ajax({
   url: "https://flynn.boolean.careers/exercises/api/holidays?year=2018&month=0",
@@ -9,11 +12,8 @@ $(document).ready(function() {
             "month": 0
         },
   method: "GET",
-  success: function (data, stato) {
-    var data = data.response;
-    console.log(data);
-    // Richiamo la funzione 'datiBrano' e gli passo l'argomento
-    cicloGiorni(data);
+  success: function (data, stato){
+    console.log(data.response);
   },
   error: function (richiesta, stato, errori) {
     alert("Errore: "+errori);
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 
 function cicloGiorni(num) {
-  for (i=1; i<=31; i++) {
+  for (i=1; i<= calendarDate.daysInMonth(); i++) {
     if (i<10) {
       i = "0"+i;
     } else {
@@ -30,9 +30,10 @@ function cicloGiorni(num) {
     }
 }
 
+
     var day = {
       "giorno": i,
-      "mese": "Gennaio"
+      "mese": calendarDate.format("MMMM"),
     }
 
 // Vado a inserire tutto nel tamplate e lo invio all'html
@@ -43,5 +44,6 @@ function cicloGiorni(num) {
 
   $(".gg-mm").append(contenuto);
 
-  }
+}
+
 })
