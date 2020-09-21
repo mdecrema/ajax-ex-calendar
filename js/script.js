@@ -13,7 +13,9 @@ $(document).ready(function() {
         },
   method: "GET",
   success: function (data, stato){
-    console.log(data.response);
+    var data = data.response;
+    console.log(data);
+  //  cicloGiorni(data);
   },
   error: function (richiesta, stato, errori) {
     alert("Errore: "+errori);
@@ -25,8 +27,6 @@ function cicloGiorni(num) {
   for (i=1; i<= calendarDate.daysInMonth(); i++) {
     if (i<10) {
       i = "0"+i;
-    } else {
-      i = i;
     }
 }
 
