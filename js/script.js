@@ -3,6 +3,7 @@ $(document).ready(function() {
   var dataIniziale = "2018-01-01";
 
   var calendarDate = moment(dataIniziale);
+  var nomeMese = moment(dataIniziale).format("MMMM");
   console.log(calendarDate);
 
   $.ajax({
@@ -60,7 +61,7 @@ function cicloGiorni(num) {
 
 // Template Mese
 var mese = {
-  "meseCorrente": calendarDate.format("MM")
+  "meseCorrente": nomeMese
 }
 
 
