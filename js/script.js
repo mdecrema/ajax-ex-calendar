@@ -23,12 +23,11 @@ $(document).ready(function() {
 })
 
 
-function cicloGiorni(num) {
+/*function cicloGiorni(num) {*/
   for (i=1; i<= calendarDate.daysInMonth(); i++) {
     if (i<10) {
       i = "0"+i;
     }
-}
 
 
     var day = {
@@ -45,5 +44,7 @@ function cicloGiorni(num) {
   $(".gg-mm").append(contenuto);
 
 }
+
+//}
 
 })
