@@ -65,7 +65,6 @@ var mese = {
   "numMese": dataSupp.format("MM")
 }
 
-
 var source = $("#entry-template-mese").html();
 var template = Handlebars.compile(source);
 
@@ -76,11 +75,11 @@ $(".titolo-mese").append(contenuto);
 // Function click su div 'Prev'
 $(".prev").click(function() {
   var mese = dataSupp.format("MM");
-  var thisMese = $(".titolo-mese").attr("data-mese");
-  console.log(thisMese);
-  if (thisMese == mese ){
-    alert("errore");
-  }
+  var thisMonth = $(".titolo-mese").attr("data-mese");
+  console.log(thisMonth);
+  //if (thisMese == mese ){
+  //  alert("errore");
+  //}
 });
 
 })
