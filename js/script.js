@@ -15,7 +15,7 @@ $(document).ready(function() {
   success: function (data, stato){
     var data = data.response;
     console.log(data);
-  //  cicloGiorni(data);
+    cicloGiorni(data);
   },
   error: function (richiesta, stato, errori) {
     alert("Errore: "+errori);
@@ -23,7 +23,6 @@ $(document).ready(function() {
 })
 
 
-/*function cicloGiorni(num) {*/
   for (i=1; i<= calendarDate.daysInMonth(); i++) {
     if (i<10) {
       i = "0"+i;
@@ -33,7 +32,10 @@ $(document).ready(function() {
     var day = {
       "giorno": i,
       "mese": calendarDate.format("MMMM"),
+      "numGiorno": calendarDate.format("YYYY-MM-DD")
     }
+
+    calendarDate.add(1, "day");
 
 // Vado a inserire tutto nel tamplate e lo invio all'html
   var source = $("#entry-template").html();
@@ -45,6 +47,10 @@ $(document).ready(function() {
 
 }
 
-//}
+function cicloGiorni(num) {
+  for (i=0; i<num.length; i++) {
+
+  }
+}
 
 })
