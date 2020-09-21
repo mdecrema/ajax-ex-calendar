@@ -50,13 +50,12 @@ $(document).ready(function() {
 function cicloGiorni(num) {
   for (i=0; i<num.length; i++) {
     //console.log(num[i].date);
-    var festa = num[i].date;
-    var codiceData = $(".ciao").attr("data-num-giorno", i);
+    var giornoFesta = num[i].date;
+    var nomeFesta = num[i].name;
+    var codiceData = $(".ciao[date-num-giorno='"+giornoFesta+"']");
     console.log(codiceData);
-   if (codiceData.includes(festa)) {
-     $(this).css({color: "red"});
+     codiceData.css({color: "red"});
    }
-  }
 }
 
 })
