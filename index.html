@@ -19,6 +19,10 @@
     </header>
     <!-- /Intestazione pagina -->
 
+    <!-- Mese corrente -->
+    <div class="titolo-mese"></div>
+    <!-- /Mese corrente -->
+
     <!-- Calendario -->
     <ul class="gg-mm">
 
@@ -28,8 +32,11 @@
     <!-- Templeate lista giorni del mese -->
     <script id="entry-template" type="text/x-handlebars-template">
 
-    <li class="ciao" date-num-giorno="{{numGiorno}}">{{giorno}} {{mese}}</li>
+    <li class="lista" date-num-giorno="{{numGiorno}}">{{giorno}} {{mese}}</li>
 
+    </script>
+    <script id="entry-template-mese" type="text/x-handlebars-template">
+      <h3 class="txt-mese">{{meseCorrente}}</h3>
     </script>
     <!-- /Templeate lista giorni del mese -->
 

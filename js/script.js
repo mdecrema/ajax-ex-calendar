@@ -32,7 +32,7 @@ $(document).ready(function() {
     var day = {
       "giorno": i,
       "mese": calendarDate.format("MMMM"),
-      "numGiorno": calendarDate.format("YYYY-MM-DD")
+      "numGiorno": calendarDate.format("YYYY-MM-DD"),
     }
 
     calendarDate.add(1, "day");
@@ -57,5 +57,24 @@ function cicloGiorni(num) {
      codiceData.css({color: "red"});
    }
 }
+
+// Template Mese
+var mese = {
+  "meseCorrente": calendarDate.format("MM")
+}
+
+
+var source2 = $("#entry-template-mese").html();
+var template2 = Handlebars.compile(source2);
+
+var contenuto2 = template2(mese);
+
+$(".titolo-mese").append(contenuto2);
+
+
+/*function cambiaMese() {
+  var mese = calendarDate.format("MM");
+  //if ()
+}*/
 
 })
