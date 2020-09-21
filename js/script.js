@@ -64,12 +64,12 @@ var mese = {
 }
 
 
-var source2 = $("#entry-template-mese").html();
-var template2 = Handlebars.compile(source2);
+var source = $("#entry-template-mese").html();
+var template = Handlebars.compile(source);
 
-var contenuto2 = template2(mese);
+var contenuto = template(mese);
 
-$(".titolo-mese").append(contenuto2);
+$(".titolo-mese").append(contenuto);
 
 
 /*function cambiaMese() {
