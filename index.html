@@ -20,7 +20,7 @@
     <!-- /Intestazione pagina -->
 
     <!-- Mese corrente -->
-    <div class="titolo-mese" data-mese="{{numMese}}"></div>
+    <div class="titolo-mese" data-mese="{{numMese}}">{{meseCorrente}}</div>
     <!-- /Mese corrente -->
 
     <!-- Calendario -->
@@ -35,10 +35,11 @@
     <li class="lista" data-num-giorno="{{numGiorno}}">{{giorno}} {{mese}}</li>
 
     </script>
+    <!-- /Templeate lista giorni del mese -->
+
     <script id="entry-template-mese" type="text/x-handlebars-template">
       <h3 class="txt-mese">{{meseCorrente}}</h3>
     </script>
-    <!-- /Templeate lista giorni del mese -->
 
     <!-- Collegamento al foglio JS -->
     <script type="text/javascript" src="js/script.js"></script>

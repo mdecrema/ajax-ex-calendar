@@ -72,14 +72,15 @@ var contenuto = template(mese);
 
 $(".titolo-mese").append(contenuto);
 
+
 // Function click su div 'Prev'
-$(".prev").click(function() {
-  var mese = dataSupp.format("MM");
-  var thisMonth = $(".titolo-mese").attr("data-mese");
-  console.log(thisMonth);
-  //if (thisMese == mese ){
-  //  alert("errore");
-  //}
+$(".next").click(function() {
+  var ciao = dataSupp;
+  meseSuccessivo();
 });
+
+function meseSuccessivo(valore) {
+  valore.add(1, "months");
+}
 
 })
