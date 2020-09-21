@@ -9,18 +9,31 @@
     <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
   </head>
   <body>
-    <h1 class="title">CALENDARIO 2018</h1>
+    <!-- Intestazione pagina -->
+    <header>
+      <div class="header_wrapper">
+        <div class="btn prev inline_bl">&lt; &nbsp;Previous</div>
+        <div class="title inline_bl"><h1 class="">CALENDARIO 2018</h1></div>
+        <div class="btn next inline_bl">Next &nbsp;&gt;</div>
+      </div>
+    </header>
+    <!-- /Intestazione pagina -->
 
+    <!-- Calendario -->
     <ul class="gg-mm">
 
     </ul>
+    <!-- /Calendario -->
 
+    <!-- Templeate lista giorni del mese -->
     <script id="entry-template" type="text/x-handlebars-template">
 
     <li class="">{{giorno}} {{mese}}</li>
 
     </script>
+    <!-- /Templeate lista giorni del mese -->
 
+    <!-- Collegamento al foglio JS -->
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

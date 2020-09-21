@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100vw;
+  border: 1px solid blue;
+}
+
+.header_wrapper {
+  width: 50%;
+  margin: auto;
+  border: 1px solid red;
+}
+
+.inline_bl {
+  display: inline-block;
+  margin: auto;
+}
+
+.title {
+  width: 55%;
+  text-align: center;
+}
+
+.btn {
+  width: 20%;
+  cursor: pointer;
+  text-align: center;
+}
