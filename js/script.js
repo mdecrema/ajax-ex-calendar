@@ -3,7 +3,7 @@ $(document).ready(function() {
   var dataIniziale = "2018-01-01";
 
   var calendarDate = moment(dataIniziale);
-  var nomeMese = moment(dataIniziale).format("MMMM");
+  var dataSupp = moment(dataIniziale);
   console.log(calendarDate);
 
   $.ajax({
@@ -53,7 +53,7 @@ function cicloGiorni(num) {
     //console.log(num[i].date);
     var giornoFesta = num[i].date;
     var nomeFesta = num[i].name;
-    var codiceData = $(".ciao[date-num-giorno='"+giornoFesta+"']");
+    var codiceData = $(".lista[data-num-giorno='"+giornoFesta+"']");
     console.log(codiceData);
      codiceData.css({color: "red"});
    }
@@ -61,7 +61,8 @@ function cicloGiorni(num) {
 
 // Template Mese
 var mese = {
-  "meseCorrente": nomeMese
+  "meseCorrente": dataSupp.format("MMMM"),
+  "numMese": dataSupp.format("MM")
 }
 
 
@@ -72,10 +73,14 @@ var contenuto = template(mese);
 
 $(".titolo-mese").append(contenuto);
 
-
-/*function cambiaMese() {
-  var mese = calendarDate.format("MM");
-  //if ()
-}*/
+// Function click su div 'Prev'
+$(".prev").click(function() {
+  var mese = dataSupp.format("MM");
+  var thisMese = $(".titolo-mese").attr("data-mese");
+  console.log(thisMese);
+  if (thisMese == mese ){
+    alert("errore");
+  }
+});
 
 })

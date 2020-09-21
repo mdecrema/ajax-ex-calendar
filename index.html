@@ -20,7 +20,7 @@
     <!-- /Intestazione pagina -->
 
     <!-- Mese corrente -->
-    <div class="titolo-mese"></div>
+    <div class="titolo-mese" data-mese="{{numMese}}"></div>
     <!-- /Mese corrente -->
 
     <!-- Calendario -->
@@ -32,7 +32,7 @@
     <!-- Templeate lista giorni del mese -->
     <script id="entry-template" type="text/x-handlebars-template">
 
-    <li class="lista" date-num-giorno="{{numGiorno}}">{{giorno}} {{mese}}</li>
+    <li class="lista" data-num-giorno="{{numGiorno}}">{{giorno}} {{mese}}</li>
 
     </script>
     <script id="entry-template-mese" type="text/x-handlebars-template">
